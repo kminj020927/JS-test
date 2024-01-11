@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+
+  <div class="alert-box" id="alert">
+    <p>알림창임</p>
+    <button onclick="alertOpen('none')">닫기</button> 
+  </div>
+  <button onclick="alertOpen('block');alertHtml('아이디입력하세요');">버튼1</button>
+  <button onclick="alertOpen('block');alertHtml('비번입력하세요');">버튼2</button>
+  
+  <script>
+
+    function alertOpen(구멍){
+      document.getElementById('alert').style.display=구멍;
+    }
+    function alertHtml(t){
+      document.getElementById('alert').innerText=t;
+    }
+
+
+  </script>
+
+</body>
+</html>
