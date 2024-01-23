@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jquery 사용법 간단정리</title>
+  <title>모달창만들기와 간단한 애니메이션</title>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="index8.css">
 </head>
@@ -14,7 +14,7 @@
 
   <div class="black-bg">
     <div class="white-bg">
-      <h4>모달창만들기와 간단한 애니메이션</h4>
+      <h4>로그인하세요</h4>
       <button class="btn btn-danger" id="close">닫기</button>
     </div>
   </div>
@@ -26,7 +26,7 @@
     $('#login').on('click',function(){
       $('.black-bg').addClass('show-modal');
     });
-    
+
     // 닫기버튼
     $('#close').on('click',function(){
       $('.black-bg').removeClass('show-modal');
