@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index12.css">
+  <title>Dark mode 버튼 만들기</title>
+</head>
+<body class="dark">
+  
+  <button class="badge" id="a">Dark</button>
+  
+
+  <script>
+
+      //badge 홀수번 클릭시 light 모드, 짝수번 클릭시 dark 모드
+      var count = 0;
+      $('.badge').on('click',function(){
+        
+        count++;
+        console.log(count);
+
+        if(count % 2 == 1){
+          $('.badge').html('Light');
+          $('body').removeClass('dark');
+  
+        }else{ 
+          $('.badge').html('Dark');
+          $('body').addClass('dark');
+
+        };
+  
+      });
+
+
+      
+
+  </script>
+</body>
+</html>
