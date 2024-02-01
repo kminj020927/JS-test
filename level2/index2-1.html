@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수, 사칙연산 실력향상 과제</title>
+</head>
+<body>
+  
+<script>
+
+  // 1번
+  let age = 23; //재할당가능
+  const place = '부천'; //재할당불가능
+
+  //2번 이자율 계산
+  var 예금액 = 60000;
+  var 미래예금액 = 0;
+
+  if ( 예금액 >= 50000 ){
+    미래예금액 = 예금액 * 1.2 * 1.2 ;
+  } else {
+    미래예금액 = 예금액 * 1.15 * 1.15 ; 
+  }
+
+  console.log(미래예금액);
+
+  //3번 마실 수 있는 커피 
+  var first = 360;
+  var total = 0;
+  total = first + first * 2/3 + first * 2/3 * 2/3;
+  console.log(total);
+</script>
+
+
+  <!-- 4번 UI 만들기 -->
+
+  <p>태조 이성계가 태어난 년도는?</p>
+<input type="text" id="answer">
+<button id="send-answer">제출</button>
+
+<script>
+  var count = 0;
+
+  document.querySelector('#send-answer').addEventListener('click', function(){
+    count += 1;
+    var 유저답안 = document.querySelector('#answer').value;
+    if (유저답안 == '1335') {
+      alert('성공')
+    } else if (count >= 3 && 유저답안 != '1335'){
+      alert('멍청아')
+    }
+  });
+</script>
+
+</script>
+
+
+
+
+
+</body>
+</html>
