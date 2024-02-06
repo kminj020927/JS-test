@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./level1/index8.css">
+  <title>정규식으로 이메일형식 검증해보기</title>
+</head>
+<body>
+
+  <button id="login">로그인</button>
+
+  <div class="black-bg">
+    <div class="white-bg">
+      <h4>로그인하세요</h4>
+
+      <form action="../level1/success.html">
+        <div class="my-3">
+          <input type="text" class="form-control" id="email">
+         </div>
+         <div class="my-3">
+           <input type="password" class="form-control" id="pw">
+         </div>
+         <button type="submit" class="btn btn-primary">전송</button>
+         <button type="button" class="btn btn-danger" id="close">닫기</button>
+      </form> 
+      <button class="btn btn-danger" id="close">닫기</button>
+    </div>
+  </div>
+  
+
+
+  <script>
+  var count = 5;
+
+  $('form').on('submit',function(){
+    var 입력한값 = document.getElementById('email').value;
+    if(입력한값 == ''){
+      alert('아이디입력안함');
+    }
+    if(/\S+@\S+.\S+/.test(입력한값)){
+      alert('이메일형식아님');
+    }
+    //비번에 영어 대문자가 적어도 1개 있는지 검사
+      var 비번 = document.getElementById('pw').value;
+      if ( /[A-Z]/.test(비번) == false ){
+        alert('대문자없는데요')
+      };
+  });
+
+</script>
+</body>
+</html>
