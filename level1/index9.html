@@ -37,12 +37,14 @@
   <script>
    // 전송버튼 누르면
    // input 에 입력한 값이 공백이면 알림창 띄우기
-   $('form').on('submit',function(){
-    if(document.getElementById('email').value == ''){
-      alert('아이디입력안함');
-    }
-   });
+   var count = 5;
 
+  setInterval(function(){
+    count -= 1;
+    if (count >= 0){
+      document.querySelector('#num').innerHTML = count;
+    } 
+  }, 1000);
    //비번이 6자 미만이면 더 길게 입력하라고 안내문 띄우기
    $('form').on('submit',function(){
     if(document.getElementById('pw').value == ''){
